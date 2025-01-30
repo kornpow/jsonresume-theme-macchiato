@@ -67,7 +67,7 @@ body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
   background: white;
-  margin: 50px 0 100px;
+  /* margin: 50px 0 100px; */
   letter-spacing: .3px;
   color: #39424B;
 }
@@ -195,18 +195,43 @@ ul.two-column li {
 }
 
 @page {
-  size: A4;
+  size: letter;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+}
+
+.title h3 {
+  font-weight: 700;
 }
 
 .container {
   padding-top: 20px;
 }
 
+/* ABOUT SECTION */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: left;
+}
+
+.about-header {
+  margin-bottom: 5rem;
+}
+
 .keyline {
   width: 45px;
-  margin: 8px 0 10px;
+  margin: 8px auto 10px;
   border-top: 1px solid #56817A;
 }
+
+/* SKILLS SECTION */
+
+/* EXPERIENCE SECTION */
 
 .pull-left {
   float: left;
@@ -251,13 +276,15 @@ ul.two-column li {
 /* Layouts */
 .page {
   background: white;
-  width: 612px;
+  /* width: 90%; */
   min-height: 792px;
   display: block;
-  margin: 0 auto;
+  margin: 0 0.75in 1in;
   border-top: 10px solid #56817A;
   padding: 36px 22px 30px 34px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); */
+  /* page-break-before: always;
+  break-before: page; */
 }
 
 .page:after {
@@ -295,7 +322,7 @@ ul.two-column li {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 36px 0 30px;
+    padding: 50px 0 20px;
     box-shadow: none;
   }
 

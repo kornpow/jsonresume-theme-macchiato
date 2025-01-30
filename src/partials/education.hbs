@@ -1,12 +1,17 @@
 {{#if resume.education.length}}
 <div class="container education-container">
-    {{> title value="Education"}} {{#each resume.education}}
+    {{> title value="Education"}}
+
+    {{#each resume.education}}
     <section class="item">
         {{> section-header name=this.institution }} {{#if location}}
         <h5 class="location">{{location}}</h5>
         {{/if}}
 
         <h4>{{#if studyType}}{{studyType}} {{/if}}{{#if area}}{{area}}{{/if}}</h4>
+        <h4 class="italic pull-left">
+            {{formatDate startDate}}{{#if endDate}}–{{formatDate endDate}}{{else}}–Present{{/if}}
+        </h4>
 
         {{#if gpa}}
         <h5>{{gpa}}</h5>

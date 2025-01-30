@@ -1,10 +1,11 @@
 {{#resume.basics}}
 <div class="container about-container">
-    {{> title value="About"}}
-
+    {{!-- <div class="about-header">
+        {{> title value="About"}}
+    </div> --}}
     {{#if location}}
         {{#location}}
-        {{> info-tag text=(formatAddress address city region postalCode countryCode) icon="fa-map-marker"}}
+        {{> info-tag text=(formatAddress address city region postalCode) icon="fa-map-marker"}}
         {{/location}}
     {{/if}}
 
@@ -20,8 +21,8 @@
         {{> info-tag text=this.phone icon="fa-mobile"}}
     {{/if}}
 
-    {{#if website}}
-        {{> info-tag text=this.website icon="fa-globe" url=this.website}}
+    {{#if url}}
+        {{> info-tag text=(concat 'Website: ' this.url) icon="fa-globe" url=this.url}}
     {{/if}}
 
     {{#if profiles}}
@@ -29,5 +30,5 @@
             {{> social}}
         {{/each}}
     {{/if}}
-</section>
+</div>
 {{/resume.basics}}
