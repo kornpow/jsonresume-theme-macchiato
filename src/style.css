@@ -229,6 +229,17 @@ ul.two-column li {
   border-top: 1px solid #56817A;
 }
 
+/* TOP HEADER */
+h1.resume-header {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.profile-header {
+  text-align: center;
+  margin: 0 auto;
+}
+
 /* SKILLS SECTION */
 
 /* EXPERIENCE SECTION */
@@ -307,6 +318,7 @@ ul.two-column li {
 
 .item {
   margin-bottom: 15px;
+  border: 1px solid red;
 }
 
 .item:last-child {
