@@ -208,7 +208,7 @@ ul.two-column li {
 }
 
 .container {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 /* ABOUT SECTION */
@@ -316,16 +316,11 @@ h1.resume-header {
   overflow: hidden;
 }
 
-.item {
-  margin-bottom: 15px;
-  border: 1px solid red;
-}
-
 .item:last-child {
   margin-bottom: 0;
 }
 
-@media print {
+/* @media print {
   body {
     margin: 0;
   }
@@ -354,11 +349,11 @@ h1.resume-header {
   .fa-external-link {
     display: none;
   }
-}
+} */
 
 /* Components */
 .info-tag-container {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .info-tag-container .fa {
@@ -396,7 +391,7 @@ h1.resume-header {
   text-transform: none;
   display: inline-block;
   vertical-align: middle;
-  width: 139px;
+  width: 150px;
 }
 
 .references-container .fa {

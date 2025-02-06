@@ -2,16 +2,16 @@
     {{!-- {{#if icon}}
     <i class="fa {{icon}}"></i>
     {{/if}} --}}
-
+    <h6 class="info-text">
+    {{name}}<br/>
     {{#if url}}
-        <h6 class="info-text">
+
             <a href="{{#if isEmail}}mailto:{{/if}}{{url}}" target="_blank">
-                {{!-- {{removeProtocol text}} --}}
                 {{text}}
-                {{!-- <i class="fa fa-external-link" aria-hidden="true"></i> --}}
             </a>
-        </h6>
+
     {{else}}
-        <h6 class="info-text">{{{text}}}</h6>
+        {{{text}}}
     {{/if}}
+    </h6>
 </div>

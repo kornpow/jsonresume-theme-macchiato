@@ -5,7 +5,7 @@
     </div> --}}
     {{#if location}}
         {{#location}}
-        {{> info-tag text=(formatAddress address city region postalCode) icon="fa-map-marker"}}
+        {{> info-tag text=(formatAddress address city region postalCode) name="Location" icon="fa-map-marker"}}
         {{/location}}
     {{/if}}
 
@@ -14,15 +14,15 @@
     {{/if}}
 
     {{#if email}}
-        {{> info-tag text=this.email icon="fa-envelope-o" isEmail=true url=this.email}}
+        {{> info-tag text=this.email name="Email" icon="fa-envelope-o" isEmail=true url=this.email}}
     {{/if}}
 
     {{#if phone}}
-        {{> info-tag text=this.phone icon="fa-mobile"}}
+        {{> info-tag text=this.phone name="Phone" icon="fa-mobile"}}
     {{/if}}
 
     {{#if url}}
-        {{> info-tag text=(concat 'Website: ' this.url) icon="fa-globe" url=this.url}}
+        {{> info-tag text=this.url name="Website" icon="fa-globe" url=this.url}}
     {{/if}}
 
     {{#if profiles}}
