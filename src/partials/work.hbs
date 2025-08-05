@@ -4,25 +4,21 @@
 
     {{#each resume.work}}
         <section class="item" style="margin-bottom: 15px;">
-            {{> section-header name=(concat position " | " name) website=url showWebsite=true }}
-
+            {{!-- Position – Company line, single line, ATS friendly --}}
+            <h4 class="bold" style="margin:0; font-size:12px;">
+                {{position}} &nbsp;|&nbsp; {{#if url}}<a href="{{url}}" class="sublink" style="font-weight: normal;">{{name}}</a>{{else}}{{name}}{{/if}} {{#if url}}<span class="sublink" style="font-weight: normal; margin-left:0.5em;">&middot; {{removeProtocol url}}</span>{{/if}}
+            </h4>
             <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px;">
-                <h5>{{#if location}}{{location}}{{/if}}</h5>
+                {{#if location}}<h4>{{location}}</h4>{{/if}}
                 <h5 style="white-space: nowrap;">
-                    {{formatDate startDate}}{{#if endDate}} — {{formatDate endDate}}{{else}} — Present{{/if}}
+                    {{formatDate startDate}} &mdash; {{#if endDate}}{{formatDate endDate}}{{else}}Present{{/if}}
                 </h5>
             </div>
-
-            {{#if summary}}
-            <p class="summary">{{summary}}</p>
-            {{/if}}
-
+            {{#if summary}}<p class="summary">{{summary}}</p>{{/if}}
             {{#if highlights.length}}
-            <ul>
-                {{#each highlights}}
-                <li>{{.}}</li>
-                {{/each}}
-            </ul>
+                <ul>
+                    {{#each highlights}}<li>{{.}}</li>{{/each}}
+                </ul>
             {{/if}}
         </section>
     {{/each}}
