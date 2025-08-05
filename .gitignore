@@ -468,3 +468,10 @@ MigrationBackup/
 # Ignore diff images generated after test failed comparation
 src/__tests__/__image_snapshots__/__diff_output__/
 
+# Generated resume files
+resume.html
+resume.pdf
+
+# Test snapshot files
+src/__tests__/__image_snapshots__/*.png
+
