@@ -20,6 +20,11 @@ handlebars.registerHelper({
 
 function render(resume) {
   const dir = `${__dirname}/src`;
+  // Read Tailwind CSS if generated
+  let tailwindCss = '';
+  try {
+    tailwindCss = fs.readFileSync(`${dir}/tailwind-output.css`, 'utf-8');
+  } catch (e) { /* ignore if not built */ }
   const css = fs.readFileSync(`${dir}/style.css`, 'utf-8');
   const resumeTemplate = fs.readFileSync(`${dir}/resume.hbs`, 'utf-8');
 
@@ -28,7 +33,7 @@ function render(resume) {
   Handlebars.partials(`${dir}/partials/**/*.{hbs,js}`);
 
   return Handlebars.compile(resumeTemplate)({
-    style: `<style>${css}</style>`,
+    style: `<style>${tailwindCss}${css}</style>`,
     resume,
   });
 }

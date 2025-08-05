@@ -1,26 +1,31 @@
 {{#if resume.work.length}}
 <div class="container work-container">
-    {{> title value="Work Experience"}}
+  {{> title value="Work Experience"}}
 
-    {{#each resume.work}}
-        <section class="item" style="margin-bottom: 15px;">
-            {{!-- Position – Company line, single line, ATS friendly --}}
-            <h4 class="bold" style="margin:0; font-size:12px;">
-                {{position}} &nbsp;|&nbsp; {{#if url}}<a href="{{url}}" class="sublink" style="font-weight: normal;">{{name}}</a>{{else}}{{name}}{{/if}} {{#if url}}<span class="sublink" style="font-weight: normal; margin-left:0.5em;">&middot; {{removeProtocol url}}</span>{{/if}}
-            </h4>
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px;">
-                {{#if location}}<h4>{{location}}</h4>{{/if}}
-                <h5 style="white-space: nowrap;">
-                    {{formatDate startDate}} &mdash; {{#if endDate}}{{formatDate endDate}}{{else}}Present{{/if}}
-                </h5>
-            </div>
-            {{#if summary}}<p class="summary">{{summary}}</p>{{/if}}
-            {{#if highlights.length}}
-                <ul>
-                    {{#each highlights}}<li>{{.}}</li>{{/each}}
-                </ul>
-            {{/if}}
-        </section>
-    {{/each}}
+  {{#each resume.work}}
+    <section class="mb-4">
+      <h4 class="font-bold text-sm mb-0 flex items-center flex-wrap gap-1">
+        <span class="text-gray-900">{{position}}</span>
+        <span class="px-1">|</span>
+        {{#if url}}
+          <a href="{{url}}" class="text-gray-900">{{name}}</a>
+        {{else}}
+          <span class="text-gray-900">{{name}}</span>
+        {{/if}}
+      </h4>
+      <div class="flex justify-between flex-wrap mb-2">
+        {{#if location}}<h5 class="text-sm">{{location}}</h5>{{/if}}
+        <h5 class="whitespace-nowrap text-sm">
+          {{formatDate startDate}} — {{#if endDate}}{{formatDate endDate}}{{else}}Present{{/if}}
+        </h5>
+      </div>
+      {{#if summary}}<p class="summary text-sm">{{summary}}</p>{{/if}}
+      {{#if highlights.length}}
+        <ul class="list-disc pl-5 text-sm leading-tight">
+          {{#each highlights}}<li class="text-sm">{{.}}</li>{{/each}}
+        </ul>
+      {{/if}}
+    </section>
+  {{/each}}
 </div>
 {{/if}}

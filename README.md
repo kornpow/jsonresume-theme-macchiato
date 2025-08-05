@@ -12,6 +12,19 @@ I also wanted I simple environment, so I used the boilerplate provided by JSON R
 > ***Currently it doesn't have any major style difference from it's parent [Caffeine](https://github.com/kelyvin/jsonresume-theme-caffeine).***
 
 
+### Tailwind CSS Integration
+
+- **Tailwind source**: `src/tailwind-input.css` imports the three Tailwind layers (`@tailwind base; @tailwind components; @tailwind utilities;`).
+- **Configuration**: `tailwind.config.js` defines the content paths (all Handlebars templates, JS, CSS and `resume.json`) and contains the default Tailwind config. Feel free to extend it (colors, spacing, fonts, etc.)
+- **Build output**: `npm run build:css` (also run automatically by the `test` script) generates a single stylesheet `src/tailwind-output.css`. This file is **automatically read and injected** by `index.js` alongside the original `style.css` – you don’t need to manually link it in the HTML.
+- **Customising**: edit `tailwind.config.js` and re‑run the build command:
+  ```bash
+  npm run build:css   # rebuilds src/tailwind-output.css
+  ```
+- **Development workflow**:
+  - `npm test` – builds Tailwind then runs Jest + visual‑snapshot test.
+  - `npm test -- -u` – When you intentionally change the UI, update the snapshot.
+
 ## Changes from Caffeine Theme
 
 ### Environment

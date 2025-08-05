@@ -4,10 +4,11 @@
   "description": "Simple theme for JSON Resume. Based on caffeine-theme.",
   "author": "Alessandro Biondi",
   "scripts": {
-    "test": "jest",
+    "test": "npm run build:css && jest",
     "prepublishOnly": "npm run pretty && npm run lint && npm run test",
     "pretty": "prettier --write --ignore-path='*lock.json' '{src/**/*.{js,ts,json},./*{js,ts,json}}' ",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "build:css": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/tailwind-output.css"
   },
   "husky": {
     "hooks": {
@@ -38,7 +39,8 @@
     "jest-handlebars": "^1.0.1",
     "jest-image-snapshot": "^2.11.0",
     "prettier": "^1.18.2",
-    "puppeteer": "^2.0.0"
+    "puppeteer": "^2.0.0",
+    "tailwindcss": "^3.4.0"
   },
   "jest": {
     "transform": {

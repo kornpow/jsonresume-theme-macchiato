@@ -1,42 +1,28 @@
 {{#if resume.projects.length}}
 <div class="container project-container">
-    {{> title value="Open Source Projects"}}
+  {{> title value="Open Source Projects"}}
 
-    {{#each resume.projects}}
-        <section class="item">
-            {{> section-header name=this.name website=this.url showWebsite=true}}
-
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px;">
-                {{#if role}}
-                    <h5 style="font-weight: bold;">{{role}}</h5>
-                {{/if}}
-                {{#if startDate}}
-                <h5 class="italic">
-                    {{formatDate startDate}}{{#if endDate}} — {{formatDate endDate}}{{else}} — Present{{/if}}
-                </h5>
-                {{/if}}
-            </div>
-
-            {{#if keywords.length}}
-            <div class="flex-container" style="margin-bottom: 10px;">
-                {{#each keywords}}
-                    <h6 class="skill">{{.}}</h6>
-                {{/each}}
-            </div>
-            {{/if}}
-
-            {{#if summary}}
-            <p class="summary">{{summary}}</p>
-            {{/if}}
-
-            {{#if highlights.length}}
-            <ul>
-                {{#each highlights}}
-                <li>{{.}}</li>
-                {{/each}}
-            </ul>
-            {{/if}}
-        </section>
-    {{/each}}
+  {{#each resume.projects}}
+    <section class="mb-4">
+      <h4 class="font-bold text-sm mb-0 flex items-center flex-wrap gap-1">
+        {{#if role}}<span class="text-gray-900 text-sm">{{role}}</span><span class="px-1">|</span>{{/if}}
+        {{#if url}}<a href="{{url}}" class="text-gray-900">{{name}}</a>{{else}}<span class="text-gray-900">{{name}}</span>{{/if}}
+      </h4>
+      <div class="flex justify-end mb-2">
+        {{#if startDate}}<h5 class="italic text-sm">{{formatDate startDate}} — {{#if endDate}}{{formatDate endDate}}{{else}}Present{{/if}}</h5>{{/if}}
+      </div>
+      {{#if keywords.length}}
+        <div class="flex flex-wrap mb-2">
+          {{#each keywords}}<span class="text-sm font-medium bg-gray-200 rounded px-1 py-0.5 mr-2 mb-1 inline-block">{{.}}</span>{{/each}}
+        </div>
+      {{/if}}
+      {{#if summary}}<p class="summary text-sm">{{summary}}</p>{{/if}}
+      {{#if highlights.length}}
+        <ul class="list-disc pl-5 text-sm leading-tight">
+          {{#each highlights}}<li>{{.}}</li>{{/each}}
+        </ul>
+      {{/if}}
+    </section>
+  {{/each}}
 </div>
 {{/if}}
