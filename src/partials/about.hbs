@@ -1,34 +1,29 @@
 {{#resume.basics}}
 <div class="container about-container">
-    {{!-- <div class="about-header">
-        {{> title value="About"}}
-    </div> --}}
-    {{#if location}}
-        {{#location}}
-        {{> info-tag text=(formatAddress address city region postalCode) name="Location" icon="fa-map-marker"}}
-        {{/location}}
-    {{/if}}
+    <div class="contact-info">
+        {{#if location}}
+            {{#location}}
+            {{> info-tag text=(formatAddress address city region postalCode) name="Location" icon="fa-map-marker"}}
+            {{/location}}
+        {{/if}}
 
-    {{#if birthday}}
-        {{> info-tag text=(concat "Born in " this.birthday) icon="fa-calendar"}}
-    {{/if}}
+        {{#if email}}
+            {{> info-tag text=this.email name="Email" icon="fa-envelope-o" isEmail=true url=this.email}}
+        {{/if}}
 
-    {{#if email}}
-        {{> info-tag text=this.email name="Email" icon="fa-envelope-o" isEmail=true url=this.email}}
-    {{/if}}
+        {{#if phone}}
+            {{> info-tag text=this.phone name="Phone" icon="fa-mobile"}}
+        {{/if}}
 
-    {{#if phone}}
-        {{> info-tag text=this.phone name="Phone" icon="fa-mobile"}}
-    {{/if}}
+        {{#if url}}
+            {{> info-tag text=this.url name="Website" icon="fa-globe" url=this.url}}
+        {{/if}}
 
-    {{#if url}}
-        {{> info-tag text=this.url name="Website" icon="fa-globe" url=this.url}}
-    {{/if}}
-
-    {{#if profiles}}
-        {{#each profiles}}
-            {{> social}}
-        {{/each}}
-    {{/if}}
+        {{#if profiles}}
+            {{#each profiles}}
+                {{> social}}
+            {{/each}}
+        {{/if}}
+    </div>
 </div>
 {{/resume.basics}}

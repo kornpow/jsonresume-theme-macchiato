@@ -3,16 +3,15 @@
     {{> title value="Work Experience"}}
 
     {{#each resume.work}}
-        <section class="item" style="margin-bottom: 5px;">
-            {{!-- {{> section-header name=position }} --}}
-            <h4 style="font-weight: bold;">{{position}} | {{name}} | {{formatDate startDate}}{{#if endDate}}—{{formatDate endDate}}{{else}}—Present{{/if}}</h4>
-            {{!-- {{> section-header name=("{{position}} | {{name}} | {{formatDate startDate}}{{#if endDate}}—{{formatDate endDate}}{{else}}—Present{{/if}}") }} --}}
-            {{!-- <h4>{{this.name}}</h4> --}}
+        <section class="item" style="margin-bottom: 15px;">
+            {{> section-header name=(concat position " | " name) website=url showWebsite=true }}
 
-            {{!-- <h4 class="italic pull-left">
-                {{formatDate startDate}}{{#if endDate}}–{{formatDate endDate}}{{else}}–Present{{/if}}
-            </h4> --}}
-            {{!-- <br/> --}}
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px;">
+                <h5>{{#if location}}{{location}}{{/if}}</h5>
+                <h5 style="white-space: nowrap;">
+                    {{formatDate startDate}}{{#if endDate}} — {{formatDate endDate}}{{else}} — Present{{/if}}
+                </h5>
+            </div>
 
             {{#if summary}}
             <p class="summary">{{summary}}</p>

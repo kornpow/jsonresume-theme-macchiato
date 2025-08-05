@@ -1,9 +1,15 @@
 {{#if network}}
     {{#if username}}
-        {{!-- {{#if (eq (lowercase network) "linkedin")}}
-            {{> info-tag text=(concat '' this.username) icon="fa-linkedin-square" }}
-        {{else}} --}}
-        {{> info-tag text=this.username name=network}}
-        {{!-- {{/if}} --}}
+        {{#if (eq (lowercase network) "linkedin")}}
+            {{> info-tag text=this.username name=network icon="fa-linkedin-square"}}
+        {{else if (eq (lowercase network) "github")}}
+            {{> info-tag text=this.username name=network icon="fa-github"}}
+        {{else if (eq (lowercase network) "twitter")}}
+            {{> info-tag text=this.username name=network icon="fa-twitter"}}
+        {{else if (eq (lowercase network) "facebook")}}
+            {{> info-tag text=this.username name=network icon="fa-facebook"}}
+        {{else}}
+            {{> info-tag text=this.username name=network icon="fa-user"}}
+        {{/if}}
     {{/if}}
 {{/if}}

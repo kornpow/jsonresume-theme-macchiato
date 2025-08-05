@@ -1,17 +1,15 @@
 <div class="info-tag-container">
-    {{!-- {{#if icon}}
     <i class="fa {{icon}}"></i>
-    {{/if}} --}}
-    <h6 class="info-text">
-    {{name}}<br/>
+    <div class="info-text">
+    {{#if name}}
+        <h6>{{name}}</h6>
+    {{/if}}
     {{#if url}}
-
-            <a href="{{#if isEmail}}mailto:{{/if}}{{url}}" target="_blank">
-                {{text}}
-            </a>
-
+        <a href="{{#if isEmail}}mailto:{{/if}}{{url}}" target="_blank">
+            {{text}}
+        </a>
     {{else}}
         {{{text}}}
     {{/if}}
-    </h6>
+    </div>
 </div>
