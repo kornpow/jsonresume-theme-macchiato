@@ -61,6 +61,24 @@ Obviously you could write a very simple Node script to use the real Puppeteer an
 Also checkout [HackMyResume](https://github.com/hacksalot/HackMyResume), a powerful tool to build and analyze your JSON Resume.
 
 
+
+## Testing
+
+The project includes a visual regression test that verifies the generated HTML layout.
+
+```bash
+# Run the test suite (adds a visual regression test)
+npm test
+```
+
+If you intentionally change the visual layout (e.g., header formatting) the test will fail because the screenshot differs from the stored snapshot. To accept intentional changes, update the snapshot:
+
+```bash
+npm test -- -u
+```
+
+This updates the saved PNG snapshot under `src/__tests__/__image_snapshots/`. Commit the updated PNG(s) with your changes.
+
 ## License
 
 Available under the [MIT license](http://mths.be/mit).
