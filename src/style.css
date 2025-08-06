@@ -198,14 +198,6 @@ ul.two-column li {
   size: letter;
 }
 
-.title {
-  text-align: center;
-  font-weight: 700;
-}
-
-.title h3 {
-  font-weight: 700;
-}
 
 .container {
   padding-top: 10px;
@@ -215,36 +207,27 @@ ul.two-column li {
 .about-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 15px 0;
+  gap: 3px;
+  padding: 8px 0;
   border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .contact-info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-}
-
-.keyline {
-  width: 45px;
-  margin: 8px auto 10px;
-  border-top: 1px solid #56817A;
-}
-
-/* TOP HEADER */
-h1.resume-header {
-  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  max-width: calc(3 * 150px + 2 * 3px + 2 * 150px);
   margin: 0 auto;
+  gap: 3px;
+  justify-content: center;
 }
 
-.profile-header {
-  text-align: center;
-  margin: 0 auto;
+@media (min-width: 600px) {
+  .contact-info {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    max-width: calc(3 * 180px + 2 * 3px + 2 * 60px);
+  }
 }
-
-/* SKILLS SECTION */
 
 /* EXPERIENCE SECTION */
 
@@ -355,62 +338,7 @@ h1.resume-header {
   }
 } */
 
-/* Components */
-.info-tag-container {
-  margin-bottom: 8px;
-  padding: 5px 10px;
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-}
 
-.info-tag-container .fa {
-  font-size: 14px;
-  width: 20px;
-  margin-right: 8px;
-  text-align: center;
-  vertical-align: middle;
-  color: #56817A;
-}
-
-.info-tag-container .fa.fa-map-marker {
-  font-size: 16px;
-}
-
-.info-tag-container .fa.fa-mobile {
-  font-size: 18px;
-}
-
-.info-tag-container .fa.fa-envelope-o {
-  font-size: 12px;
-}
-
-.info-tag-container .fa.fa-desktop {
-  font-size: 11px;
-}
-
-.info-tag-container .fa.fa-external-link {
-  width: auto;
-  font-size: inherit;
-  vertical-align: text-top;
-}
-
-.info-tag-container .info-text {
-  font-size: 12px;
-  text-transform: none;
-  display: inline-block;
-  vertical-align: middle;
-  width: auto;
-  flex: 1;
-}
-
-.info-tag-container .info-text h6 {
-  margin: 0;
-  font-weight: bold;
-  font-size: 11px;
-  color: #666;
-}
 
 .references-container .fa {
   font-size: 14px;

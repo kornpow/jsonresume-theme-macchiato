@@ -1,11 +1,11 @@
-<div class="section-header clearfix">
+<div class="mb-2">
     {{#if name}}
-    <h3 class="bold pull-left" style="margin:0;">
+    <h3 class="text-sm font-bold text-gray-900 mb-1">
         {{#if website}}
-            <a href="{{website}}" target="_blank" style="text-decoration:none; color: inherit;">
+            <a href="{{website}}" target="_blank" class="hover:text-brand-teal transition-colors">
                 {{name}}
                 {{#if showWebsite}}
-                    <span class="sublink" style="font-weight: normal; margin-left:0.5em;">&middot; {{removeProtocol website}}</span>
+                    <span class="font-normal text-gray-500 ml-2">• {{removeProtocol website}}</span>
                 {{/if}}
             </a>
         {{else}}
@@ -15,7 +15,7 @@
     {{/if}}
 </div>
 {{#if description}}
-  <h4>
+  <h4 class="text-xs text-gray-600 mb-2">
     {{description}}
   </h4>
 {{/if}}

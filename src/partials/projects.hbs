@@ -5,15 +5,15 @@
   {{#each resume.projects}}
     <section class="mb-4">
       <h4 class="font-bold text-sm mb-0 flex items-center flex-wrap gap-1">
-        {{#if role}}<span class="text-gray-900 text-sm">{{role}}</span><span class="px-1">|</span>{{/if}}
+        {{#if role}}<span class="text-gray-900">{{role}}</span><span class="px-1">|</span>{{/if}}
         {{#if url}}<a href="{{url}}" class="text-gray-900">{{name}}</a>{{else}}<span class="text-gray-900">{{name}}</span>{{/if}}
       </h4>
-      <div class="flex justify-end mb-2">
+      <div class="flex justify-between flex-wrap mb-2">
         {{#if startDate}}<h5 class="italic text-sm">{{formatDate startDate}} — {{#if endDate}}{{formatDate endDate}}{{else}}Present{{/if}}</h5>{{/if}}
       </div>
       {{#if keywords.length}}
-        <div class="flex flex-wrap mb-2">
-          {{#each keywords}}<span class="text-sm font-medium bg-gray-200 rounded px-1 py-0.5 mr-2 mb-1 inline-block">{{.}}</span>{{/each}}
+        <div class="flex flex-wrap gap-1 mb-3">
+          {{#each keywords}}<span class="inline-block text-xs px-2 py-1 bg-teal-100 text-teal-700 rounded font-medium">{{.}}</span>{{/each}}
         </div>
       {{/if}}
       {{#if summary}}<p class="summary text-sm">{{summary}}</p>{{/if}}
