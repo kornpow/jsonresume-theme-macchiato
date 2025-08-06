@@ -426,19 +426,4 @@ h1.resume-header {
   font-style: italic;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 
-.main-skill {
-  font-size: 80%;
-}
-
-.skill {
-  margin: .15em;
-  padding: .15em;
-  background: ghostwhite;
-  border-radius: 5px;
-}

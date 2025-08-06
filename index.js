@@ -24,7 +24,9 @@ function render(resume) {
   let tailwindCss = '';
   try {
     tailwindCss = fs.readFileSync(`${dir}/tailwind-output.css`, 'utf-8');
-  } catch (e) { /* ignore if not built */ }
+  } catch (e) {
+    /* ignore if not built */
+  }
   const css = fs.readFileSync(`${dir}/style.css`, 'utf-8');
   const resumeTemplate = fs.readFileSync(`${dir}/resume.hbs`, 'utf-8');
 
