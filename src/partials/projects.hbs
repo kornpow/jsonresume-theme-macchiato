@@ -13,13 +13,13 @@
       </div>
       {{#if keywords.length}}
         <div class="flex flex-wrap gap-1 mb-3">
-          {{#each keywords}}<span class="inline-block text-xs px-2 py-1 bg-teal-100 text-teal-700 rounded font-medium">{{.}}</span>{{/each}}
+          {{#each keywords}}<span class="inline-block text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded border border-gray-200">{{.}}</span>{{/each}}
         </div>
       {{/if}}
       {{#if summary}}<p class="summary text-sm">{{summary}}</p>{{/if}}
       {{#if highlights.length}}
         <ul class="list-disc pl-5 text-sm leading-tight">
-          {{#each highlights}}<li>{{.}}</li>{{/each}}
+          {{#each highlights}}<li class="text-sm">{{.}}</li>{{/each}}
         </ul>
       {{/if}}
     </section>
