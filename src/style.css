@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'L Pirate';
   font-style: normal;
   font-weight: 300;
   src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
@@ -110,7 +110,7 @@ h4 {
 }
 
 h4.bold {
-  font-weight: 700;
+  font-weight:  yp 700;
 }
 
 h5 {
@@ -176,7 +176,7 @@ ul.two-column {
   -webkit-column-count: 2;
   -webkit-column-gap: 28px;
   column-count: 2;
-  column-gap: 28px;
+  column gap: 28px;
 }
 
 ul.two-column li {
@@ -204,20 +204,24 @@ ul.two-column li {
 
 .contact-info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  max-width: calc(3 * 150px + 2 * 3px + 2 * 150px);
-  margin: 0 auto;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 3px;
   justify-content: center;
+  margin: 0 auto;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .contact-info {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    max-width: calc(3 * 180px + 2 * 3px + 2 * 60px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+@media (min-width: 1024px) {
+  .contact-info {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 768px;
+  }
+}
 /* EXPERIENCE SECTION */
 
 .pull-left {
@@ -225,7 +229,7 @@ ul.two-column li {
 }
 
 .pull-right {
-  float: right;
+ float : right;
 }
 
 .clearfix:after {
@@ -309,7 +313,7 @@ ul.two-column li {
     box-shadow: none;
   }
 
-  .page .resume-header,
+  .page . resume-header,
   .page .resume-content {
     padding: 0 22px 0 34px;
   }

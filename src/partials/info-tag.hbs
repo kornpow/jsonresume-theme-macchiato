@@ -1,15 +1,15 @@
 <div class="flex items-center p-2 bg-gray-50 rounded border border-gray-100">
     <i class="fa {{icon}} text-brand-teal w-6 text-center mr-3 text-sm"></i>
-    <div class="flex-1 min-w-0">
+    <div class="flex-1">
     {{#if name}}
         <h6 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-0.5 leading-tight">{{name}}</h6>
     {{/if}}
     {{#if url}}
-        <a href="{{#if isEmail}}mailto:{{/if}}{{url}}" target="_blank" class="text-xs text-gray-900 hover:text-brand-teal transition-colors truncate block">
+        <a href="{{#if isEmail}}mailto:{{/if}}{{url}}" target="_blank" class="text-xs text-gray-900 hover:text-brand-teal transition-colors block">
             {{text}}
         </a>
     {{else}}
-        <span class="text-xs text-gray-900 truncate block">{{{text}}}</span>
+        <span class="text-xs text-gray-900 block">{{{text}}}</span>
     {{/if}}
     </div>
 </div>

@@ -1,9 +1,9 @@
 {{#resume.basics}}
-<div class="container about-container">
+<div class="about-container">
     <div class="contact-info">
         {{#if location}}
             {{#location}}
-            {{> info-tag text=(formatAddress address city region postalCode) name="Location" icon="fa-map-marker"}}
+            {{> info-tag text=(formatAddress address city region postalCode) name="Location" icon="fa-map-marker" }}
             {{/location}}
         {{/if}}
 
