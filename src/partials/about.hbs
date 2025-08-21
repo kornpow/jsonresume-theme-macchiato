@@ -1,6 +1,6 @@
 {{#resume.basics}}
 <div class="about-container">
-    <div class="contact-info">
+    <div class="grid grid-cols-1 gap-[3px] justify-center mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:max-w-[768px] print:grid-cols-3 print:max-w-none">
         {{#if location}}
             {{#location}}
             {{> info-tag text=(formatAddress address city region postalCode) name="Location" icon="fa-map-marker" }}

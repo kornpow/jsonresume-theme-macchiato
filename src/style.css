@@ -202,25 +202,11 @@ ul.two-column li {
   margin-bottom: 12px;
 }
 
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 3px;
-  justify-content: center;
-  margin: 0 auto;
-}
 
 @media (min-width: 640px) {
-  .contact-info {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1024px) {
-  .contact-info {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    max-width: 768px;
-  }
 }
 /* EXPERIENCE SECTION */
 
@@ -300,10 +286,6 @@ ul.two-column li {
   margin-bottom: 0;
 }
 
-/* @media print {
-  body {
-    margin: 0;
-  }
 
   .page {
     width: 100%;
@@ -348,3 +330,18 @@ ul.two-column li {
 }
 
 
+
+  .page {
+    margin: 0 !important;
+    padding: 0.5in !important;
+    border-top: none !important;
+    box-shadow: none !important;
+  }
+  body {
+    margin: 0 !important;
+  }
+  /* Hide or adjust elements that don't print well */
+  a[href]:after {
+    content: none !important;
+  }
+}
